@@ -5,13 +5,29 @@
     <script>
       var x = 1;
       console.log(x);
-      document.write("Assignment 2");
+      <p>Assignment 2</p>
       document.write(x);
       
       function OnClickFunction() {
         document.write("I am a function!")
       }
       
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+               openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
     </script>
     
   </head>
@@ -23,22 +39,7 @@
       
     </body>
   
-function myFunction() {
-  document.getElementById("myDropdown").classList.toggle("show");
-}
 
-window.onclick = function(event) {
-  if (!event.target.matches('.dropbtn')) {
-    var dropdowns = document.getElementsByClassName("dropdown-content");
-    var i;
-    for (i = 0; i < dropdowns.length; i++) {
-      var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('show')) {
-        openDropdown.classList.remove('show');
-      }
-    }
-  }
-}
                                      
   <p>Assignment 4</p>
   <div class = "dropdownFlavor">
