@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
-  <head><title>Page 1</title>
+  <head>
+    <title>Page 1</title>
     <link rel="stylesheet" href="style.css">
     <script>
       var x = 1;
@@ -13,79 +14,59 @@
         document.write("I am a function!")
       }
       
-      
-      
-     var subjectObject = {
-  "Front-end": {
-    "HTML": ["Links", "Images", "Tables", "Lists"],
-    "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
-    "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
-  },
-  "Back-end": {
-    "PHP": ["Variables", "Strings", "Arrays"],
-    "SQL": ["SELECT", "UPDATE", "DELETE"]
-  }
-}
-window.onload = function() {
-  var subjectSel = document.getElementById("subject");
-  var topicSel = document.getElementById("topic");
-  var chapterSel = document.getElementById("chapter");
-  for (var x in subjectObject) {
-    subjectSel.options[subjectSel.options.length] = new Option(x, x);
-  }
-  subjectSel.onchange = function() {
-    //empty Chapters- and Topics- dropdowns
-    chapterSel.length = 1;
-    topicSel.length = 1;
-    //display correct values
-    for (var y in subjectObject[this.value]) {
-      topicSel.options[topicSel.options.length] = new Option(y, y);
-    }
-  }
-  topicSel.onchange = function() {
-    //empty Chapters dropdown
-    chapterSel.length = 1;
-    //display correct values
-    var z = subjectObject[subjectSel.value][this.value];
-    for (var i = 0; i < z.length; i++) {
-      chapterSel.options[chapterSel.options.length] = new Option(z[i], z[i]);
-    }
-  }
-}
+     var flavorObject = {
+       "Front-end": {
+         "HTML": ["Links", "Images", "Tables", "Lists"],
+         "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
+         "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
+       },
+       "Back-end": {
+          "PHP": ["Variables", "Strings", "Arrays"],
+          "SQL": ["SELECT", "UPDATE", "DELETE"]
+       }
+     }
+     window.onload = function() {
+       var flavorSel = document.getElementById("flavor");
+       var allergySel = document.getElementById("alergy");
+       for (var x in allergyObject) {
+         flavorSel.options[flavorSel.options.length] = new Option(x, x);
+       }
+       flavorSel.onchange = function() {
+         allergySel.length = 1;
+          for (var y in flavorObject[this.value]) {
+            allergySel.options[allergySel.options.length] = new Option(y, y);
+          }
+        }
+      }
     
-    </script>
-    
+    </script> 
   </head>
+  
   <body>
     <p>Assignment 1</p>
     <h1>Hello World!</h1>
     <p>Assignment 3</p>
-    <p>Click <span onclick="OnClickFunction()">here</span>!<p>
-      
-    </body>
+    <p>Click <span onclick="OnClickFunction()">here</span>!<p>  
   
 
                                      
   <p>Assignment 4</p>
  
   <form name="form1" id="form1" action="/action_page.php">
-    Subjects: <select name="subject" id="subject">
-      <option value="" selected="selected">Select subject</option>
+    Flavor: <select name="flavor" id="flavor">
+      <option value="" selected="selected">Vanilla</option>
+      <option value="" selected="selected">Chocolate</option>
     </select>
     <br><br>
-    Topics: <select name="topic" id="topic">
-      <option value="" selected="selected">Please select subject first</option>
-    </select>
-    <br><br>
-    Chapters: <select name="chapter" id="chapter">
-      <option value="" selected="selected">Please select topic first</option>
+    Allergy: <select name="allergy" id="allergy">
+      <option value="" selected="selected">Milk</option>
+      <option value="" selected="selected">Nuts</option>
     </select>
     <br><br>
       <input type="submit" value="Submit">
    </form>
       
-  </div>
-</div>
+ </body>
   
  </html>
 
