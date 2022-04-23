@@ -12,8 +12,19 @@
 
      let cake = {
        flavor: "vanilla",
-       allergy: "nuts"
+       allergy: "nuts",
      };
+     
+     cake.details = showDetails;
+     
+     function Bread(flavor) {
+     	this.flavor= flavor
+        this.allergy= function(flavor) {this.flavor= flavor}
+        }
+        
+     let vanilla_bread = new Bread("vanilla");
+     let chocolate_bread = new Bread("chocolate");
+     chocolate_bread.allergy= function(flavor) {this.flavor = "pumpkin"};
         
       function showDetails(flavor, allergy) {
         document.write("Your " + flavor + " cake has a " + allergy + " allergy");
