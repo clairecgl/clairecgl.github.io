@@ -1,72 +1,57 @@
 <!DOCTYPE html>
 <html>
   <head><title>Page 1</title>
-   <script>
+   <script type = "text/javascript">
       var x = 1;
       console.log(x);
-      document.write("Assignment 2);
-      document.write("\n");
       document.write(x);
-      
-     
-     <!-- function OnClickFunction() {
-        document.write("I am a function!")
+           
+      function OnClickFunction() {
+        	document.write("I am a function!");
       }
-      
-     var flavorObject = {
-       "Front-end": {
-         "HTML": ["Links", "Images", "Tables", "Lists"],
-         "CSS": ["Borders", "Margins", "Backgrounds", "Float"],
-         "JavaScript": ["Variables", "Operators", "Functions", "Conditions"]
-       },
-       "Back-end": {
-          "PHP": ["Variables", "Strings", "Arrays"],
-          "SQL": ["SELECT", "UPDATE", "DELETE"]
-       }
-     }
-     window.onload = function() {
-       var flavorSel = document.getElementById("flavor");
-       var allergySel = document.getElementById("allergy");
-       for (var x in allergyObject) {
-         flavorSel.options[flavorSel.options.length] = new Option(x, x);
-       }
-       flavorSel.onchange = function() {
-         allergySel.length = 1;
-          for (var y in flavorObject[this.value]) {
-            allergySel.options[allergySel.options.length] = new Option(y, y);
-          }
-        }
-      } -->
-     
+
+        
+      function showDetails(flavor, allergy) {
+        document.write("the " + flavor + " cake has a " + allergy + " allergy");
+      }
+            
     </script> 
   </head>
   
   <body>
-    <p>Assignment 1</p>
+    <h3>Assignment 2</h3>
     <h1>Hello World!</h1>
-    <p>Assignment 3</p>
-    <p>Click <span onclick="OnClickFunction()">here</span>!<p>  
-  
+    <h3>Assignment 1</h3>
+    
+    
+   <p>Click <span onclick="OnClickFunction()">here</span>!</p>     
 
-                                     
-  <p>Assignment 4</p>
- 
-  <form name="form1" id="form1" action="/action_page.php">
-    Flavor: <select name="flavor" id="flavor">
-      <option value="" selected="selected">Vanilla</option>
-      <option value="" selected="selected">Chocolate</option>
+    <h3>Assignment 3</h3>
+      
+    
+    <label for="flavor">Choose a flavor for your cake:</label>
+    <select name="flavor" id="flavor">
+      <option value="vanilla">Vanilla</option>
+      <option value="chocolate">Chocolate</option>
     </select>
     <br><br>
-    Allergy: <select name="allergy" id="allergy">
-      <option value="" selected="selected">Milk</option>
-      <option value="" selected="selected">Nuts</option>
+    
+    
+    <label for="allergy">Choose a allergy for your cake:</label>
+    <select name="allergy" id="allergy">
+      <option value="milk">Milk</option>
+      <option value="nut">Nuts</option>
     </select>
-    <br><br>
-      <input type="submit" value="Submit">
-   </form>
+    <br><br> 
+
+
+     <button id="button" onclick="showDetails(document.getElementById('flavor').value, document.getElementById('allergy').value)">Submit</button>
+     
+     
+     
+     
+   <h3>Assignment 4</h3>
       
  </body>
   
  </html>
-
-
