@@ -1,19 +1,5 @@
 body {
-  background-color: lightgray;
-}
-
-#square {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: auto;
-  width: 200px;
-  height: 200px;
-  background-color: pink;
-}
-
-.rot {
-  transform: rotate(180deg);
+  background-color: red;
 }
 
 .dropbtn {
