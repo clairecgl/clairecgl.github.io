@@ -12,9 +12,13 @@
 
         
       function showDetails(flavor, allergy) {
-        document.write("the " + flavor + " cake has a " + allergy + " allergy");
+        document.write("Your " + flavor + " cake has a " + allergy + " allergy");
       }
-            
+      
+      function showDonut(icing, sprinkle) {
+        document.write("Here is your " + icing + " donut with " + sprinkle + " sprinkles");
+      }
+      
     </script> 
   </head>
   
@@ -33,6 +37,7 @@
     <select name="flavor" id="flavor">
       <option value="vanilla">Vanilla</option>
       <option value="chocolate">Chocolate</option>
+      <option value="carrot">Carrot</option>
     </select>
     <br><br>
     
@@ -41,14 +46,35 @@
     <select name="allergy" id="allergy">
       <option value="milk">Milk</option>
       <option value="nut">Nuts</option>
+      <option value="egg">Egg</option>
     </select>
     <br><br> 
 
 
-     <button id="button" onclick="showDetails(document.getElementById('flavor').value, document.getElementById('allergy').value)">Submit</button>
+     <button id="button" onclick="showDetails(document.getElementById('flavor').value, document.getElementById('allergy').value)">Submit</button> <br><br>
+     
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgeEQMzoCvAFRM8wrBUdqrGi59IxP9_a4Ntw&usqp=CAU" alt="Cake" style="width:250px;height:200px;"><br> <br>
      
      
+     <label for="icing">Choose an icing for your donut:</label>
+    <select name="icing" id="icing">
+      <option value="white">White</option>
+      <option value="pink">Pink</option>
+    </select>
+    <br><br>
+    
+   
+    <label for="sprinkle">Choose a sprinkle for your donut:</label>
+    <select name="sprinkle" id="sprinkle">
+      <option value="rainbow">Rainbow</option>
+      <option value="gold">Gold</option>
+    </select>
+    <br><br> 
+
+
+     <button id="button" onclick="showDonut(document.getElementById('icing').value, document.getElementById('sprinkle').value)">Submit</button>
      
+   
      
    <h3>Assignment 4</h3>
       
