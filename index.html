@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head><title>Page 1</title>
+    <link rel="stylesheet" href="style.css">
     <script>
       var x = 1;
       console.log(x);
+      document.write("Assignment 2");
       document.write(x);
       
       function OnClickFunction() {
@@ -14,16 +16,43 @@
     
   </head>
   <body>
+    <p>Assignment 1</p>
     <h1>Hello World!</h1>
+    <p>Assignment 3</p>
     <p>Click <span onclick="OnClickFunction()">here</span>!<p>
       
     </body>
   
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+                                     
+  <p>Assignment 4</p>
   <div class = "dropdownFlavor">
-    <button onclick="myFunction()" class="dropbtn">Dropdown</button>
+    <button onclick="myFunction()" class="dropbtn">Flavor</button>
     <div id="myDropdown" class="dropdown-content">
       <a href="#">Vanilla</a>
       <a href="#">Chocolate</a>
+      
+  <div class = "dropdownFlavor">
+    <button onclick="myFunction()" class="dropbtn">Allergy</button>
+    <div id="myDropdown" class="dropdown-content">
+      <a href="#">Nuts</a>
+      <a href="#">Milk</a>
+      
   </div>
 </div>
   
