@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head><title>Page 1</title>
@@ -27,11 +28,49 @@
      chocolate_bread.allergy= function(flavor) {this.flavor = "pumpkin"};
         
       function showDetails(flavor, allergy) {
-        document.write("Your " + flavor + " cake has a " + allergy + " allergy");
+        document.write("Your ");
+        
+        var G = document.createElement("B");
+        G.appendChild(document.createTextNode(flavor));
+        
+        var tmp = document.createElement("div");
+        tmp.appendChild(G);
+        document.write(tmp.innerHTML);
+        
+        document.write(" has a ");
+        
+        var H = document.createElement("i");
+        H.appendChild(document.createTextNode(allergy));
+        
+        var tmp2 = document.createElement("div");
+        tmp2.appendChild(H);
+        document.write(tmp2.innerHTML);
+        
+        document.write(" allergy");
       }
       
       function showDonut(icing, sprinkle) {
-        document.write("Here is your " + icing + " donut with " + sprinkle + " sprinkles");
+       // document.write("Here is your " + icing + " donut with " + sprinkle + " sprinkles");
+       
+       document.write("Here is your ");
+        
+        var G = document.createElement("B");
+        G.appendChild(document.createTextNode(icing));
+        
+        var tmp = document.createElement("div");
+        tmp.appendChild(G);
+        document.write(tmp.innerHTML);
+        
+        document.write(" donut with ");
+        
+        var H = document.createElement("i");
+        H.appendChild(document.createTextNode(sprinkle));
+        
+        var tmp2 = document.createElement("div");
+        tmp2.appendChild(H);
+        document.write(tmp2.innerHTML);
+        
+        document.write(" sprinkles");
       }
       
     </script> 
@@ -91,7 +130,7 @@
      
    
      
-   <h3>Assignment 4</h3>
+   <h3>Assignment 4 + 5</h3>
       
  </body>
   
