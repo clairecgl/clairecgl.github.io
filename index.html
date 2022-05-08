@@ -73,6 +73,18 @@
         document.write(" sprinkles");
       }
       
+    window.onload = function () {
+    	document.getElementById("cakeimage").addEventListener("mouseenter", function(e) {
+         var myImage = document.querySelector("img");
+      	 var mySrc = myImage.getAttribute("src");
+       	 if(mySrc === "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgeEQMzoCvAFRM8wrBUdqrGi59IxP9_a4Ntw&usqp=CAU") {
+            	myImage.setAttribute ("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS2MBTzDeyq3ilPuXF_4ZIHhoMzN6K6dmiEjPqGFheQ453CqA-jqv9O19nhBqPKwzEFkWA&usqp=CAU");
+         } else {
+            	myImage.setAttribute ("src","https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgeEQMzoCvAFRM8wrBUdqrGi59IxP9_a4Ntw&usqp=CAU");
+         }
+        
+      });
+    };
     </script> 
   </head>
   
@@ -107,7 +119,7 @@
 
      <button id="button" onclick="showDetails(document.getElementById('flavor').value, document.getElementById('allergy').value)">Submit</button> <br><br>
      
-     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgeEQMzoCvAFRM8wrBUdqrGi59IxP9_a4Ntw&usqp=CAU" alt="Cake" style="width:250px;height:200px;"><br> <br>
+     <img id = "cakeimage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgeEQMzoCvAFRM8wrBUdqrGi59IxP9_a4Ntw&usqp=CAU" alt="Cake" style="width:250px;height:200px;"><br> <br>
      
      
      <label for="icing">Choose an icing for your donut:</label>
@@ -131,6 +143,8 @@
    
      
    <h3>Assignment 4 + 5</h3>
+   <p>Enter the image for a surprise!</p>
+   <h3>Assignment 6</h3>
       
  </body>
   
