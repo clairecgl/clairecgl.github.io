@@ -85,6 +85,23 @@
         
       });
     };
+    
+    var imgObj ;
+	var animate ;
+	function init(){
+	 imgObj = document.getElementById('myImage');
+	 imgObj.style.position= 'relative'; 
+	 imgObj.style.left = '0px'; 
+	}
+	function moveRight(){
+	 imgObj.style.left = parseInt(imgObj.style.left) + 5 + 'px'; 
+	 animate = setTimeout(moveRight,20); 
+	}
+	function stop(){
+	 clearTimeout(animate); 
+	}
+	window.onload =init; 
+
     </script> 
   </head>
   
@@ -146,6 +163,12 @@
    <p>Enter the image for a surprise!</p>
    <h3>Assignment 6</h3>
       
+      <img id="myImage" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRgeEQMzoCvAFRM8wrBUdqrGi59IxP9_a4Ntw&usqp=CAU"" width="100" height="100"/>
+<p>Click the buttons below to start and stop the animation.</p>
+<input type="button" value="Play" onclick="moveRight();" />
+<input type="button" value="Stop" onclick="stop();" />
+ <h3> Assignment 7</h3>
  </body>
   
  </html>
+ 
