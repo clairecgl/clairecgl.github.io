@@ -73,11 +73,18 @@ const com = {
 
 // NET
 const net = {
-    x : (canvas.width - 2)/2,
+    x : 100,
     y : 0,
     height : 10,
     width : 2,
-    color : "BLACK"
+    color : "WHITE"
+}
+const net2 = {
+    x : 500,
+    y : 0,
+    height : 10,
+    width : 2,
+    color : "WHITE"
 }
 
 // draw a rectangle, will be used to draw paddles
@@ -117,12 +124,15 @@ function drawNet(){
     for(let i = 0; i <= canvas.height; i+=15){
         drawRect(net.x, net.y + i, net.width, net.height, net.color);
     }
+    for(let i = 0; i <= canvas.height; i+=15){
+        drawRect(net2.x, net2.y + i, net2.width, net2.height, net2.color);
+    }
 }
 
 // draw text
 function drawText(text,x,y){
     ctx.fillStyle = "#FFF";
-    ctx.font = "75px fantasy";
+    ctx.font = "50px fantasy";
     ctx.fillText(text, x, y);
 }
 
@@ -167,7 +177,7 @@ function update(){
     com.y += ((ball.y - (com.y + com.height/2)))*0.1;
     
     //create black hole space
-    if (ball.x>200 && ball.x<500) {
+    if (ball.x>100 && ball.x<500) {
     	ball.color = "BLACK";
     }
     else {
@@ -219,10 +229,10 @@ function render(){
     drawRect(0, 0, canvas.width, canvas.height, "#000");
     
     // draw the user score to the left
-    drawText(user.score,canvas.width/4,canvas.height/5);
+    drawText(user.score,canvas.width/15,canvas.height/5);
     
     // draw the COM score to the right
-    drawText(com.score,3*canvas.width/4,canvas.height/5);
+    drawText(com.score,13.5*canvas.width/15,canvas.height/5);
     
     // draw the net
     drawNet();
@@ -248,5 +258,12 @@ let framePerSecond = 50;
 let loop = setInterval(game,1000/framePerSecond);
 
 </script>
+<style>
+h1 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
 </body>
+<br><br><br><br><br><br><br>
+<h1> BLACKHOLE PONG </h1>
 </html>
