@@ -5,14 +5,9 @@ h1   {font-family: helvetica}
 p    {font-family: helvetica}
 h3    {font-family: helvetica}
 b    {font-family: helvetica}
+h2    {font-family: helvetica}
 
 .button {
   background-color: #4CAF50;
-  border: none;
- color: white;
- padding: 15px 32px;
- txt-align: center;
- text-decoration: none;
- display: inline-block;
- font-size: 16px;
+  color: white;
 	}
