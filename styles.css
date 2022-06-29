@@ -6,7 +6,7 @@ p    {font-family: helvetica}
 h3    {font-family: helvetica}
 b    {font-family: helvetica}
 
-button {
+.button {
   background-color: #4CAF50;
   border: none;
  color: white;
