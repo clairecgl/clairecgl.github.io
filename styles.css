@@ -1,11 +1,11 @@
 body {
 	background-color: #F0EAD6;
 }
-h1   {font-family: Noto Sans font-color: "red"}
+h1   {font-family: Noto Sans; font-color: "red"}
 p    {font-family: Noto Sans; font-size: 80%}
 h3    {font-family: Noto Sans; font-size: 90%}
 b    {font-family: Noto Sans; font-size: 90%}
-h2    {font-family: Noto Sans; font-size: 80%}
+h2    {font-family: Noto Sans}
 
 .button {
   background-color: #4CAF50;
