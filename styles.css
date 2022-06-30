@@ -1,5 +1,7 @@
 body {
 	background-color: #F1e7d9;
+	height: 100vh;
+  	width: 100vw;
 }
 h1   {font-family: Noto Sans}
 p    {font-family: Noto Sans; font-size: 80%}
