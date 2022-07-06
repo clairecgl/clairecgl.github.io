@@ -1,13 +1,14 @@
 body {
 	background-color: #F1e7d9;
-  	max-width: 500px;
+  	max-width: 800px;
+	padding-left: 50px;
 }
 h1   {font-family: Noto Sans}
 p    {font-family: Noto Sans; font-size: 80%}
 h3    {font-family: Noto Sans; font-size: 90%}
 b    {font-family: Noto Sans; font-size: 90%}
 h2    {font-family: Noto Sans}
-a    {font-family: Noto Sans; font-size: 80%}
+a    {font-family: Noto Sans; font-size: 100%}
 
 .button {
   background-color: #4CAF50;
