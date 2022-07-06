@@ -1,7 +1,7 @@
 body {
 	background-color: #F1e7d9;
   	max-width: 800px;
-	padding-left: 50px;
+	padding-left: calc((100vw - 800px)/2);
 }
 h1   {font-family: Noto Sans}
 p    {font-family: Noto Sans; font-size: 80%}
