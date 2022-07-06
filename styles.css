@@ -1,17 +1,8 @@
 body {
 	background-color: #F1e7d9;
-	height: 80vh;
-  	width: 80vw;
-	position: absolute; 
-	top: 0; 
-	left: 0; 
-	right: 0; 
-	left: 0; 
-	text-align: center; 
-	border: 1px solid #ccc; 
-	height: 100%; 
-	width: 100%; 
-	vertical-align: middle;
+  	max-width: 500px;
+  	margin: auto;
+	
 }
 h1   {font-family: Noto Sans}
 p    {font-family: Noto Sans; font-size: 80%}
