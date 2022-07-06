@@ -13,4 +13,10 @@ a    {font-family: Noto Sans; font-size: 100%}
 .button {
   background-color: #4CAF50;
   color: white;
-	}
+}
+
+.p-container{
+  display: flex;
+  gap: .5rem;
+}
+
